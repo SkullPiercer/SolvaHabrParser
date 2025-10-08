@@ -5,10 +5,18 @@ from core.config import get_settings
 
 settings = get_settings()
 
-async def parse_habr_jobs(q: list, pages: int):
+async def parse_habr_jobs(
+    q: list, pages: int, grade: str = None, remote: bool = False
+):
     vacancies = []
+
     url = f'{settings.habr_url}/vacancies?q={'+'.join(q)}'
-    print(url)
+
+    if grade:
+        url += f'&qid={grade.value.split()[0]}'
+    
+    if remote:
+        url += f'remote={remote}'
 
     async with aiohttp.ClientSession() as session:
         for page in range(1, pages + 1):
