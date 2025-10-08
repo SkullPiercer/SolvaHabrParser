@@ -5,7 +5,7 @@ class HabrSpider(scrapy.Spider):
     name = 'habr'
     allowed_domains = ['career.habr.com']
     def __init__(self, q="python", experience=None, remote=False, **kwargs):
-        super().__init__(**kwargs)  # важно: передаем **kwargs в родителя!
+        super().__init__(**kwargs)
 
         base_url = 'https://career.habr.com/vacancies?type=all'
         params = [f'q={q}']
