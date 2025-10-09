@@ -19,6 +19,15 @@ git clone git@github.com:SkullPiercer/SolvaHabrParser.git
 ```
 cd SolvaHabrParser
 ```
+Создать .env файл и заполнить его данными:
+```
+touch .env
+
+title=Название проекта
+description=Описание проекта
+
+habr_url=https://career.habr.com
+```
 
 Собрать образ проекта:
 ```
