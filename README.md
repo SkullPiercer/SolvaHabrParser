@@ -65,9 +65,11 @@ GET /parse?q=python&q=fastapi&pages=2&grade=middle&remote=true
       "title": "Python Developer",
       "company": "Acme Corp",
       "link": "https://career.habr.com/vacancies/123456",
-      "salary": "от 200 000 ₽",
-      "remote": true,
-      "grade": "middle"
+      "stack": : [
+        "Python",
+        "Младший (Junior)",
+        "FastAPI",
+      ]
     },
     ...
   ]
